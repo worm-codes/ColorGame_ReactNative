@@ -21,7 +21,10 @@ const ColorGame = (props) => {
  begin=begin.map(()=>randomColor())
  
   const [colors,setColors]=useState(begin);
-
+  let trueColor=colors[rand]
+  const [left,setLeft]=useState(Math.floor(colors.length/2))
+  let answer = new Array(12).fill("");
+   answer=answer.map(()=>trueColor);
 
  
 
@@ -74,8 +77,189 @@ const ColorGame = (props) => {
      }}
      />
     
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[1]} 
+
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[1]="rgb(242,242,242)";
+      setColors(changeTo);
+     }}
+      
+     setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
    
+    
+    <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[2]} 
+    changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[2]="rgb(242,242,242)";
+      setColors(changeTo);
      
+     }}
+    
+    
+     setAllColors={()=>{
+     
+       setColors(answer)
+     }}
+     />
+   
+    </View>
+  
+    
+   
+
+   <View style={{flexDirection:"row",marginTop:20}}>
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[3]} 
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[3]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+     
+     setAllColors={()=>{
+      setColors(answer)
+     }}
+     />
+   
+     <Box trueColor={trueColor} number={left} left={()=>{ if(left!=0)setLeft(left-1)}} pickedColor={colors[4]} 
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[4]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+     
+       setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
+   
+
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[5]}
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[5]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+      
+     setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
+   
+    
+    
+    </View>
+     <View style={{flexDirection:"row",marginTop:20}}>
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[6]} 
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[6]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+     
+    
+     setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
+   
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[7]} 
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[7]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+     
+       setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
+   
+
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[8]}
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[8]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+      
+     setAllColors={()=>{
+     setColors(answer)
+     }}
+     />
+   
+    
+    
+    </View>
+     <View style={{flexDirection:"row",marginTop:20}}>
+     <Box trueColor={trueColor}  number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[9]}
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[9]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }} 
+     
+     setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
+   
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[10]} 
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[10]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+     
+       setAllColors={()=>{
+       setColors(answer)
+     }}
+     />
+   
+
+     <Box trueColor={trueColor} number={left} left={()=>{if(left!=0)setLeft(left-1)}} pickedColor={colors[11]}
+     changeColor={()=>{
+       const changeTo=[...colors];
+      changeTo[11]="rgb(242,242,242)";
+      setColors(changeTo);
+     
+    
+
+     }}
+     
+     setAllColors={()=>{
+      
+       setColors(answer)
+     }}
+     />
+   
     
     
     </View>

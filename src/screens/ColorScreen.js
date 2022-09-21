@@ -11,7 +11,16 @@ const ColorScreen = () => {
 
    
   return <View>
-     
+      <Button
+    
+      title="Create A COLOR"
+      onPress={()=>{
+          /*...colors colors listesinin kopyasını alıp buna random rgb yi ekleyip, bu yeni arrayi artık colors arrayi yapıyor*/
+          setColors([...colors,randomRGB()]);
+          
+        
+        
+      }}/>
       <FlatList
        keyExtractor={(item)=>item}
       data={colors}
